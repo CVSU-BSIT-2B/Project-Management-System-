@@ -68,7 +68,6 @@
             background-color: #ffffff;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             width: 100%; /* Ensure it spans the full width */
-            height: 550px;
             margin: 0 auto;
             text-align: center;  /* Ensure all text inside hero is centered */
             flex-direction: row; /* Arrange the content in a row by default */
@@ -77,7 +76,6 @@
         .hero-content {
             max-width: 50%;
             margin-right: 20px;  /* Space between text and image */
-             margin-left: 150px;
         }
 
         .hero-content h2 {
@@ -128,6 +126,65 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
+        /* New Section - Quotes, Note, Reminder */
+        .quote-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 50px 40px;
+            background-color: #FFEB3B;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #003366;
+            margin-top: 50px;
+        }
+
+        .quote {
+            width: 48%;
+            background-color: #FFEB3B;
+            padding: 20px;
+            border-radius: 10px;
+          
+        }
+
+        .quote h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .quote p {
+            font-size: 18px;
+        }
+
+        .note-reminder {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .note, .reminder {
+            background-color: #ffffff;
+            padding: 20px;
+            width: 48%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .note h4, .reminder h4 {
+            font-size: 20px;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .note ul, .reminder ul {
+            list-style: none;
+        }
+
+        .note ul li, .reminder ul li {
+            font-size: 16px;
+            color: #555;
+        }
+
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             .hero {
@@ -153,12 +210,20 @@
                 max-width: 80%;
             }
 
-            .buttons {
+            .quote-section {
                 flex-direction: column;
-                gap: 15px;
+                align-items: center;
+            }
+
+            .quote, .note, .reminder {
+                width: 100%;
+            }
+
+            .note-reminder {
+                flex-direction: column;
+                gap: 20px;
             }
         }
-
     </style>
 </head>
 <body>
@@ -178,7 +243,7 @@
         </nav>
     </header>
 
-    <!-- Main Section -->
+    <!-- Main Section (Hero Section) -->
     <section class="hero">
         <div class="hero-content">
             <h2>"Organize, Optimize, and Achieve more together."</h2>
@@ -190,6 +255,33 @@
         </div>
         <div class="hero-image">
             <img src="mainsample.png" alt="Person working">
+        </div>
+    </section>
+
+    <!-- New Section Below Hero -->
+    <section class="quote-section">
+        <div class="quote">
+            <h3>"Where every plan stays on track."</h3>
+            <p>- Syncro</p>
+        </div>
+
+        <div class="note-reminder">
+            <div class="note">
+                <h4>Note</h4>
+                <p>This is Note for our Project Management System.</p>
+            </div>
+
+            <div class="reminder">
+                <h4>Reminder List</h4>
+                <ul>
+                    <li>ERD Diagram</li>
+                    <li>MOBILE APP</li>
+                    <li>Project Development</li>
+                    <li>Data Structures</li>
+                    <li>Understanding the Self Exam</li>
+                    <li>FITT 4 Practical</li>
+                </ul>
+            </div>
         </div>
     </section>
 
