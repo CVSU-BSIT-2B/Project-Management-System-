@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syncro</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #003366, #1a4a77);
+            padding: 20px 40px;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo h1 {
+            color: #FFD700;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .navbar nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar nav ul li {
+            margin-right: 30px;
+        }
+
+        .navbar nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar nav ul li a:hover {
+            color: #FFD700;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: center;  /* Horizontally center content */
+            align-items: center;  /* Vertically center content */
+            padding: 60px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Ensure it spans the full width */
+            height: 550px;
+            margin: 0 auto;
+            text-align: center;  /* Ensure all text inside hero is centered */
+            flex-direction: row; /* Arrange the content in a row by default */
+        }
+
+        .hero-content {
+            max-width: 50%;
+            margin-right: 20px;  /* Space between text and image */
+             margin-left: 150px;
+        }
+
+        .hero-content h2 {
+            font-size: 36px;
+            color: #003366;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .buttons .btn {
+            background-color: #FFD700;
+            padding: 15px 35px;
+            color: #003366;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .buttons .btn:hover {
+            background-color: #FFB800;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hero Image */
+        .hero-image img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                padding: 40px 20px;
+            }
+
+            .hero-content {
+                text-align: center;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .hero-content h2 {
+                font-size: 30px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .hero-image img {
+                max-width: 80%;
+            }
+
+            .buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Syncro</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Syncro</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>"Organize, Optimize, and Achieve more together."</h2>
+            <p>Syncro makes it easy for students, teachers, and teams to collaborate, organize projects, and track progress – all in one simple platform.</p>
+            <div class="buttons">
+                <a href="#" class="btn">Know More</a>
+                <a href="#" class="btn">Request a Demo</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="mainsample.png" alt="Person working">
+        </div>
+    </section>
+
+</body>
+</html>
