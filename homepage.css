@@ -1,0 +1,330 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f0f4f8;
+}
+
+/* HEADER */
+
+header {
+    background-color: #194276;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo img {
+    width: 60px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #f3a158;
+    width: 0;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+nav a:hover {
+    color: #f3a158;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.auth-buttons button {
+    margin-left: 15px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.4s, color 0.4s, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.login {
+    background-color: #f3a158;
+    color: white;
+    box-shadow: 0 4px 15px rgba(243,161,88,0.5);
+}
+
+.signup {
+    background-color: #faaa4d;
+    color: white;
+    box-shadow: 0 4px 15px rgba(250,170,77,0.5);
+}
+
+.login:hover {
+    background-color: white;
+    color: #f3a158;
+    box-shadow: 0 6px 20px rgba(243,161,88,0.7);
+}
+
+.signup:hover {
+    background-color: white;
+    color: #faaa4d;
+    box-shadow: 0 6px 20px rgba(250,170,77,0.7);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #d9e4f5 100%);
+    box-shadow: inset 0 10px 30px -15px rgba(25, 66, 118, 0.3);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    color: #194276;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(243,161,88,0.6);
+}
+
+.hero h2 {
+    font-style: italic;
+    margin: 15px 0 25px;
+    color: #5271ff;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.2rem;
+    color: #33475b;
+}
+
+.hero img {
+    width: 600px;
+    max-width: 90vw;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(25, 66, 118, 0.2);
+    transition: none; /* Removed hover effect */
+}
+
+/* INFO */
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #2f4b75;
+    color: white;
+    padding: 50px 60px;
+    align-items: center;
+    gap: 30px;
+    border-radius: 0 0 25px 25px;
+}
+
+.info .text {
+    flex: 1 1 400px;
+    padding: 20px;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.info .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    flex: 1 1 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: none; /* Removed hover effect */
+}
+
+/* FEATURES */
+.features {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 -10px 30px rgba(25, 66, 118, 0.1);
+}
+
+.features p {
+    font-size: 1.1rem;
+    margin: 15px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    color: #194276;
+}
+
+.features img {
+    margin-top: 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(25, 66, 118, 0.15);
+    transition: none; /* Removed hover effect */
+}
+
+/* CONTACT */
+.contact {
+    background-color: #1d3557;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 40px;
+    gap: 30px;
+    border-radius: 0 0 25px 25px;
+}
+
+.contact form {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    transition: box-shadow 0.4s ease;
+}
+
+.contact form:hover {
+    box-shadow: inset 0 0 30px rgba(243,161,88,0.8);
+}
+
+.contact form input,
+.contact form textarea {
+    margin: 12px 0;
+    padding: 15px 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #1d3557;
+    font-weight: 600;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    color: #a5a5a5;
+    font-weight: 400;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #f3a158;
+    background-color: #fff;
+}
+
+/* Right side */
+.contact-right {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: left;
+}
+
+.contact-right img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    transition: none; /* Removed hover effect */
+}
+
+
+.contact-info {
+    max-width: 400px;
+}
+
+.contact-info strong {
+    color: #faaa4d; /* keep orange color */
+    font-weight: 700;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+.contact-info h2 {
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 15px;
+    color: #f3a158;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #d6d6d6;
+    font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+    background-color: #5271ff;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.15);
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    .info, .contact {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .hero img {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 500px) {
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    .auth-buttons button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.1rem;
+    }
+}
