@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login Page</title>
-  <link rel="stylesheet" href="login.css" />
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="signin.css" />
 </head>
 <body>
   <header class="navbar">
@@ -24,27 +24,24 @@
 
   <main class="login-wrapper">
     <div class="login-box">
-      <h1>Login</h1>
-      <p>Welcome back! Login to your account.</p>
+      <h1>Sign Up</h1>
+      <p>Create your account below.</p>
+      <form method="POST" action="consign.php">
+        <label for="name" class="sr-only">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Full Name" required />
 
-      <?php if (!empty($error)): ?>
-        <p style="color: red;"><?php echo htmlspecialchars($error); ?></p>
-      <?php endif; ?>
-
-      <form method="POST" action="conlog.php">
         <label for="email" class="sr-only">Email address</label>
         <input type="email" id="email" name="email" placeholder="Email" required />
 
         <label for="password" class="sr-only">Password</label>
         <input type="password" id="password" name="password" placeholder="Password" required />
 
-        <div class="remember-me">
-          <input type="checkbox" id="remember" name="remember" />
-          <label for="remember">Remember Me</label>
-        </div>
-
-        <button type="submit" class="login-submit">Login</button>
+        <button type="submit" class="login-submit">Sign Up</button>
       </form>
+      <p class="switch-text">
+        Do you have an account? 
+        <a href="login.php" class="switch-link">Login</a>
+      </p>
     </div>
   </main>
 </body>
