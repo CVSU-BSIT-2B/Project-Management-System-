@@ -1,0 +1,253 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2c4a75;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 30px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.logo img {
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links */
+.nav-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #f29656;
+  width: 0;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+
+.nav-links a:hover {
+  color: #f29656;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Auth Buttons */
+.auth-buttons a {
+  margin-left: 10px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: white;
+  color: #2c4a75;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.6);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #f29656;
+  color: white;
+  box-shadow: 0 6px 20px rgba(242,150,86,0.7);
+  border-color: #f29656;
+}
+
+/* Signup Button */
+.signup-btn {
+  background-color: #f29656;
+  color: white;
+  box-shadow: 0 4px 15px rgba(242,150,86,0.5);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: white;
+  color: #f29656;
+  box-shadow: 0 6px 20px rgba(242,150,86,0.7);
+  border-color: #f29656;
+}
+
+/* Login/Signup Page Layout */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.login-box {
+  background-color: white;
+  border: 8px solid #f29656;
+  border-radius: 25px;
+  padding: 60px 40px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(242,150,86,0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+  box-shadow: 0 18px 35px rgba(242,150,86,0.5);
+}
+
+.login-box h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #2c4a75;
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 3px rgba(242,150,86,0.7);
+}
+
+.login-box p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  max-width: 320px;
+  padding: 14px 18px;
+  border-radius: 20px;
+  border: none;
+  background-color: #eee;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+  outline: none;
+  background-color: white;
+  box-shadow: 0 0 8px 2px #f29656;
+  color: #2c4a75;
+}
+
+input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+/* Button */
+.login-submit {
+  width: 100%;
+  max-width: 320px;
+  padding: 14px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f29656;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(242,150,86,0.5);
+  user-select: none;
+}
+
+.login-submit:hover {
+  background-color: #d47e30;
+  box-shadow: 0 6px 20px rgba(212,126,48,0.7);
+}
+
+/* "Do you have account?" text */
+.login-text {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-text a {
+  color: #f29656;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.login-text a:hover {
+  color: #d47e30;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 540px) {
+  .login-box {
+    padding: 40px 25px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"],
+  .login-submit {
+    max-width: 100%;
+  }
+  
+  .nav-links a {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+  
+  .auth-buttons a {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+}
